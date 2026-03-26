@@ -14,8 +14,13 @@ The evaluation dataset was constructed to test LLM safety classifiers across lan
 3. **Mixed Prompts**, he final dataset, was created by combining the unsafe prompts with the safe prompts. This unified set contains 1,120 prompts in total and reflects a realistic mixture of safe and unsafe instructions.
 
 ## Models
+Our evaluation based on two models:
+- Qwen3-Guard-4B: is a safety moderation model, it is already developed specifically to deetch harmful or unsafe content. Thus, we upload different language datasets and evalute.
+- Qwen3-4B-Instruct: is a general-purpose model, so we gave system prompt with few shotting. With this model, we focused on the task: Is the prompt harmful or not?
 
-## Translation
+## Translation flow
+Because of working with the low-resource language like Asturian, we needed to follow this especific translation flow as shown in the diagram below:
+
 
 ## Results
 ![result1](img/qwen3guard.png)
