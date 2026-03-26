@@ -20,7 +20,7 @@ Our evaluation based on two models:
 
 ## Translation flow
 Because of working with the low-resource language like Asturian, we needed to follow this especific translation flow as shown in the diagram below:
-
+![translation](img/translation-flow.png)
 
 ## Results
 ![result1](img/qwen3guard.png)
