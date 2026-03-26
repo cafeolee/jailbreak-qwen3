@@ -11,7 +11,7 @@ The evaluation dataset was constructed to test LLM safety classifiers across lan
 
 1. **Unsafe prompts** were collected from the AdvBench harmful behaviors dataset, containing instructions that are explicitly unsafe or adversarial.
 2. **Safe prompts** set consist of standard commands as well as tricky prompts that include words associated with harmful behavior but are contextually safe. These tricky prompts are designed to challenge classifiers by appearing potentially harmful without actually being unsafe.
-3. **Mixed Prompts**, he final dataset, was created by combining the unsafe prompts with the safe prompts. This unified set contains 1,120 prompts in total and reflects a realistic mixture of safe and unsafe instructions.
+3. **Mixed prompts**, he final dataset, was created by combining the unsafe prompts with the safe prompts. This unified set contains 1,120 prompts in total and reflects a realistic mixture of safe and unsafe instructions.
 
 ## Models
 Our evaluation based on two models:
@@ -19,13 +19,21 @@ Our evaluation based on two models:
 - Qwen3-4B-Instruct: is a general-purpose model, so we gave system prompt with few shotting. With this model, we focused on the task: Is the prompt harmful or not?
 
 ## Translation flow
-Because of working with the low-resource language like Asturian, we needed to follow this especific translation flow as shown in the diagram below:
+Because of working with the low-resource language like Asturian, we needed to follow an especific translation flow as shown in the diagram below:
+
 ![translation](img/translation-flow.png)
 
 ## Results
+We obtained the following results when classifying the **Mixed prompts dataset**: figure 1 shows the results obtain with the Qwen3-Guard-4B model and figure 2, with the Qwen3-Instruct-4B.
+<br>
+<br>
 ![result1](img/qwen3guard.png)
 
 ![result2](img/qwen3_simple.png)
+
+Finally, inspired by *Jailbroken: How Does LLM Safety Training Fail?* (Wei et al. , 2023), we also experimented with the Qwen3-Instruct-4B model by adding the word "sure" at the beginning of each prompt. Figure 3 shows the results:
+
+![result](img/qwen3_version_sure.png)
 
 ## Reproducibility
 Since this project consists of multiple notebooks and relies on a specific folder structure, the recommended way to run it is via Google Drive & Colab.
