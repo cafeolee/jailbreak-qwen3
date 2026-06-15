@@ -2,7 +2,6 @@
 
 **Bersun Şipal, Inés Martínez Fernández** 
 
----
 
 ## Introduction
 
